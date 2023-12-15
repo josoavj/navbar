@@ -31,42 +31,46 @@ class Homepage extends StatelessWidget{
           ),
           ),
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: 0,
-        elevation: 5,
-        indicatorColor: Colors.blueAccent,
-        height: 50,
-        backgroundColor: Colors.white,
-        //labelBehavior: null,
-        onDestinationSelected: (index){
-          switch (index){
-            case 0: {
-              // This page
-            break;
-            }
-            case 1: {
-              Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Profile()));
-            break;
-            }
-            case 2: {
-              Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Files()));
-            break;
-            }
-            case 3: {
-              Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => About()));
-            break;
-            }
-          }
-        },
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
-          NavigationDestination(icon: Icon(Icons.book), label: "Files"),
-          NavigationDestination(icon: Icon(Icons.info), label: "About")
-        ],),
+      bottomNavigationBar: navbar(context),
     );
+  }
+
+  NavigationBar navbar(BuildContext context) {
+    return NavigationBar(
+      selectedIndex: 0,
+      elevation: 5,
+      indicatorColor: Colors.blueAccent,
+      height: 50,
+      backgroundColor: Colors.white,
+      //labelBehavior: null,
+      onDestinationSelected: (index){
+        switch (index){
+          case 0: {
+            // This page
+          break;
+          }
+          case 1: {
+            Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Profile()));
+          break;
+          }
+          case 2: {
+            Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Files()));
+          break;
+          }
+          case 3: {
+            Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => About()));
+          break;
+          }
+        }
+      },
+      destinations: const [
+        NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+        NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+        NavigationDestination(icon: Icon(Icons.book), label: "Files"),
+        NavigationDestination(icon: Icon(Icons.info), label: "About")
+      ],);
   }
 }
