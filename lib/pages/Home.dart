@@ -32,6 +32,9 @@ class Homepage extends StatelessWidget{
         selectedIndex: 0,
         elevation: 5,
         indicatorColor: Colors.blueAccent,
+        height: 50,
+        backgroundColor: Colors.white,
+        //labelBehavior: null,
         onDestinationSelected: (index){
           switch (index){
             case 0: {
@@ -39,6 +42,8 @@ class Homepage extends StatelessWidget{
             break;
             }
             case 1: {
+              Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Homepage()));
             break;
             }
             case 2: {
