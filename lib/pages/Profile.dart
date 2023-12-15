@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:navbar/pages/About.dart';
 import 'package:navbar/pages/Home.dart';
+import 'package:navbar/pages/files.dart';
 
 class Profile extends StatelessWidget{
   Profile({super.key});
@@ -47,12 +49,12 @@ class Profile extends StatelessWidget{
             }
             case 2: {
               Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ));
+                        MaterialPageRoute(builder: (context) => Files()));
             break;
             }
             case 3: {
               Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ));
+                        MaterialPageRoute(builder: (context) =>  About()));
             break;
             }
           }

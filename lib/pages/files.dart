@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navbar/pages/About.dart';
 import 'package:navbar/pages/Home.dart';
 import 'package:navbar/pages/Profile.dart';
 
@@ -11,7 +12,7 @@ class Files extends StatelessWidget{
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: const Text(
-          "Profile",
+          "Files",
           style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w600,
@@ -21,7 +22,7 @@ class Files extends StatelessWidget{
       ),
       body: const Center(
         child: Text(
-          'My profile',
+          'My files',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -30,7 +31,7 @@ class Files extends StatelessWidget{
           ),
       ),
       bottomNavigationBar: NavigationBar(
-        selectedIndex: 1,
+        selectedIndex: 2,
         elevation: 5,
         indicatorColor: Colors.blueAccent,
         height: 50,
@@ -53,7 +54,7 @@ class Files extends StatelessWidget{
             }
             case 3: {
               Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ));
+                        MaterialPageRoute(builder: (context) => About()));
             break;
             }
           }
