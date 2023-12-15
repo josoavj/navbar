@@ -2,7 +2,6 @@
 
 - Author: Josoa886
 - It's a simple navigation bar implementation
-A new Flutter project.
 
 ## Getting Started
 
