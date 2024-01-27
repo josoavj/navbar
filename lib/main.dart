@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter';
 import 'package:navbar/pages/Home.dart';
 
 void main() {
@@ -14,12 +14,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Text',
       theme: ThemeData(
-        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Homepage() ,
+      home: Homepage(),
     );
   }
 }
-
