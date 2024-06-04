@@ -1,4 +1,4 @@
-import 'package:flutter';
+import "package:flutter";
 import 'package:navbar/pages/Home.dart';
 
 void main() {
